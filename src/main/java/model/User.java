@@ -1,14 +1,14 @@
 package model;
 
 /**
- * User - Represents a system user (admin, cashier, or storekeeper).
+ * User - Represents a system user (admin, cashier, or stockkeeper).
  */
 public class User {
 
     private int userId;
     private String username;
     private String password;
-    private String role; // 'admin', 'cashier', or 'storekeeper'
+    private String role; // 'admin', 'cashier', or 'stockkeeper'
 
     // Constructors
     public User() {}
