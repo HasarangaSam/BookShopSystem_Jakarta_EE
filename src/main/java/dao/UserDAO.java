@@ -47,29 +47,4 @@ public class UserDAO {
         return user;
     }
     
- // Adds a new user to the database (used for registering admin)
-    public boolean addUser(User user) {
-        String sql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
-
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-
-            // Set username
-            stmt.setString(1, user.getUsername());
-
-            // Set hashed password
-            stmt.setString(2, user.getPassword());
-
-            // Set role (should be 'admin' here)
-            stmt.setString(3, user.getRole());
-
-            // Execute update
-            int rows = stmt.executeUpdate();
-            return rows > 0;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
 }
