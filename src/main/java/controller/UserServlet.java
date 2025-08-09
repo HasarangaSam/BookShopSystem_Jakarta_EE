@@ -85,7 +85,7 @@ public class UserServlet extends HttpServlet {
             String hashedPassword = PasswordUtil.hashPassword(password); // Hashing the password
 
             // Use constructor to create User object
-            User newUser = new User(0, username, hashedPassword, role); // userId is 0 for new users
+            User newUser = new User(0, username, hashedPassword, role); 
 
             try {
                 userDAO.addUser(newUser);
