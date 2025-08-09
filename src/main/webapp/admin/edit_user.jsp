@@ -67,7 +67,7 @@
                 <label for="role" class="form-label">🔑 Role</label>
                 <select class="form-select" name="role" id="role" required>
                     <option value="cashier" <%= "cashier".equals(editUser.getRole()) ? "selected" : "" %>>Cashier</option>
-                    <option value="storekeeper" <%= "storekeeper".equals(editUser.getRole()) ? "selected" : "" %>>Store Keeper</option>
+                    <option value="stockkeeper" <%= "stockkeeper".equals(editUser.getRole()) ? "selected" : "" %>>Stock Keeper</option>
                 </select>
             </div>
 

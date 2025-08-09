@@ -10,9 +10,6 @@ public class User {
     private String password;
     private String role; // 'admin', 'cashier', or 'stockkeeper'
 
-    // Constructors
-    public User() {}
-
     public User(int userId, String username, String password, String role) {
         this.userId = userId;
         this.username = username;

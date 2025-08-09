@@ -84,10 +84,8 @@ public class UserServlet extends HttpServlet {
 
             String hashedPassword = PasswordUtil.hashPassword(password); // Hashing the password
 
-            User newUser = new User();
-            newUser.setUsername(username);
-            newUser.setPassword(hashedPassword);
-            newUser.setRole(role);
+            // Use constructor to create User object
+            User newUser = new User(0, username, hashedPassword, role); // userId is 0 for new users
 
             try {
                 userDAO.addUser(newUser);
@@ -105,18 +103,14 @@ public class UserServlet extends HttpServlet {
                 String password = request.getParameter("password");
                 String role = request.getParameter("role");
 
-                User updatedUser = new User();
-                updatedUser.setUserId(userId);
-                updatedUser.setUsername(username);
-                updatedUser.setRole(role);
-
+                // Create User object using constructor
+                User updatedUser = new User(userId, username, null, role); // userId and role from form
                 // If password provided, hash and set it
                 if (password != null && !password.trim().isEmpty()) {
                     updatedUser.setPassword(PasswordUtil.hashPassword(password));
-                } else {
-                    updatedUser.setPassword(null); // Leave it null to skip updating password
                 }
 
+                // Update user in the database
                 userDAO.updateUser(updatedUser);
                 response.sendRedirect("users?msg=User+updated+successfully");
 

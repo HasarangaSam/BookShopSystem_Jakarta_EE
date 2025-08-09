@@ -32,11 +32,12 @@ public class UserDAO {
 
                 // Compares a plain password with the stored hashed password
                 if (PasswordUtil.checkPassword(password, storedHashedPassword)) {
-                    user = new User();
-                    user.setUserId(rs.getInt("user_id"));
-                    user.setUsername(rs.getString("username"));
-                    user.setPassword(storedHashedPassword);
-                    user.setRole(rs.getString("role"));
+                    user = new User(
+                        rs.getInt("user_id"),
+                        rs.getString("username"),
+                        storedHashedPassword,
+                        rs.getString("role")
+                    );
                 }
             }
 
@@ -57,10 +58,12 @@ public class UserDAO {
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
-                User user = new User();
-                user.setUserId(rs.getInt("user_id"));
-                user.setUsername(rs.getString("username"));
-                user.setRole(rs.getString("role"));
+                User user = new User(
+                    rs.getInt("user_id"),
+                    rs.getString("username"),
+                    null,
+                    rs.getString("role")
+                );
                 users.add(user);
             }
 
@@ -101,11 +104,12 @@ public class UserDAO {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                user = new User();
-                user.setUserId(rs.getInt("user_id"));
-                user.setUsername(rs.getString("username"));
-                user.setRole(rs.getString("role"));
-                // We do not set the password field here
+                user = new User(
+                    rs.getInt("user_id"),
+                    rs.getString("username"),
+                    rs.getString("password"), // Password is included for completeness, but not used
+                    rs.getString("role")
+                );
             }
 
         } catch (Exception e) {
