@@ -15,7 +15,7 @@ jobs:
         image: mysql:8.0
         env:
           MYSQL_ROOT_PASSWORD: rootpass
-          MYSQL_DATABASE: pahanaedudb
+          MYSQL_DATABASE: pahanaedubookshopdb
           MYSQL_USER: testuser
           MYSQL_PASSWORD: testpass
         ports:
@@ -44,7 +44,7 @@ jobs:
     - name: 🏗️ Set up database tables
       run: |
         sleep 10
-        mysql -h 127.0.0.1 -u root -prootpass pahanaedudb < schema.sql
+        mysql -h 127.0.0.1 -u root -prootpass pahanaedubookshopdb < schema.sql
 
     - name: 🧩 Download required JARs
       run: |
