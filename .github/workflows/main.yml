@@ -56,7 +56,8 @@ jobs:
         curl -L -o lib/jakarta.activation.jar https://repo1.maven.org/maven2/jakarta/activation/jakarta.activation-api/2.0.1/jakarta.activation-api-2.0.1.jar
         curl -L -o lib/junit-4.12.jar https://repo1.maven.org/maven2/junit/junit/4.12/junit-4.12.jar
         curl -L -o lib/hamcrest-core-2.2.jar https://repo1.maven.org/maven2/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar
-
+        curl -L -o lib/gson-2.13.1.jar https://repo1.maven.org/maven2/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar
+        
     - name: 🧪 Compile all Java code (including tests)
       run: |
         find src/main/java -name "*.java" > sources.txt
