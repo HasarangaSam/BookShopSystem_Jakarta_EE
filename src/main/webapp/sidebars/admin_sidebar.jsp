@@ -55,6 +55,7 @@
     <a href="customers">📇 Manage Customers</a>
     <a href="view_items">📚 View Inventory</a>
     <a href="bill_history">📈 Billing History</a>
+    <a href="analytics">📊 Analytics</a>
     <a href="../common/help.jsp">❓ Help</a>
     <a href="../logout.jsp">🚪 Logout</a>
 </div>
