@@ -10,6 +10,7 @@ public class User {
     private String password;
     private String role; // 'admin', 'cashier', or 'stockkeeper'
 
+    // Constructor
     public User(int userId, String username, String password, String role) {
         this.userId = userId;
         this.username = username;
@@ -50,9 +51,4 @@ public class User {
         this.role = role;
     }
 
-    // Debug print
-    @Override
-    public String toString() {
-        return "User [userId=" + userId + ", username=" + username + ", role=" + role + "]";
-    }
 }

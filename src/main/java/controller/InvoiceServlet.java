@@ -112,10 +112,8 @@ public class InvoiceServlet extends HttpServlet {
         }
     }
 
-    // Utility method to get customer email - you can optimize this in DAO if preferred
+    // Utility method to get customer email 
     private String getCustomerEmail(int customerId) {
-        // Simple DAO call or JDBC query to get email by customer ID
-        // For demo, we can do a quick direct query here, or implement a CustomerDAO method
         try {
             return new dao.CustomerDAO().getCustomerById(customerId).getEmail();
         } catch (Exception e) {

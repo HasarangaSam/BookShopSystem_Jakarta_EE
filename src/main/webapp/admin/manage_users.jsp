@@ -71,7 +71,6 @@
                 </tr>
             </thead>
             <tbody>
-                <%-- Fetch user list from request attribute set by servlet --%>
                 <%
                     java.util.List<model.User> users = (java.util.List<model.User>) request.getAttribute("users");
                     if (users == null || users.isEmpty()) {
