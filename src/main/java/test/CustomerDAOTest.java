@@ -1,6 +1,7 @@
 package test;
 
 import dao.CustomerDAO;
+import dao.CustomerDAOInterface;
 import model.Customer;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class CustomerDAOTest {
 
-    private CustomerDAO customerDAO;
+    private CustomerDAOInterface customerDAO;
 
     @Before
     public void setUp() {

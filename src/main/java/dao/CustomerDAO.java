@@ -10,9 +10,10 @@ import java.util.List;
 /**
  * CustomerDAO - Handles database operations related to customers.
  */
-public class CustomerDAO {
+public class CustomerDAO implements CustomerDAOInterface {
 
     // Add a new customer
+	@Override
     public void addCustomer(Customer customer) {
         String sql = "INSERT INTO customers (first_name, last_name, address, telephone, email) VALUES (?, ?, ?, ?, ?)";
 
@@ -33,6 +34,7 @@ public class CustomerDAO {
     }
 
     // Get all customers
+	@Override
     public List<Customer> getAllCustomers() {
         List<Customer> customers = new ArrayList<>();
         String sql = "SELECT * FROM customers";
@@ -63,6 +65,7 @@ public class CustomerDAO {
     }
 
     // Get customer by ID
+	@Override
     public Customer getCustomerById(int id) {
         String sql = "SELECT * FROM customers WHERE customer_id = ?";
         Customer customer = null;
@@ -93,6 +96,7 @@ public class CustomerDAO {
     }
 
     // Update customer
+	@Override
     public void updateCustomer(Customer customer) {
         String sql = "UPDATE customers SET first_name=?, last_name=?, address=?, telephone=?, email=? WHERE customer_id=?";
 
@@ -114,6 +118,7 @@ public class CustomerDAO {
     }
 
     // Delete customer
+	@Override
     public void deleteCustomer(int customerId) {
         String sql = "DELETE FROM customers WHERE customer_id = ?";
 
@@ -129,6 +134,7 @@ public class CustomerDAO {
     }
 
     // Search customers by first name (partial match)
+	@Override
     public List<Customer> searchCustomersByFirstName(String firstName) {
         List<Customer> customers = new ArrayList<>();
         String sql = "SELECT * FROM customers WHERE first_name LIKE ?";

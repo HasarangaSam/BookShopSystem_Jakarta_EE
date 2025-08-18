@@ -1,6 +1,7 @@
 package controller;
 
 import dao.CategoryDAO;
+import dao.CategoryDAOInterface;
 import model.Category;
 import util.ValidationUtil;
 
@@ -21,7 +22,7 @@ import java.util.List;
 })
 public class CategoryServlet extends HttpServlet {
 
-    private CategoryDAO categoryDAO;
+    private CategoryDAOInterface categoryDAO;
 
     @Override
     public void init() {

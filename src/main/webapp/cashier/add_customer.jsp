@@ -62,7 +62,7 @@
             </div>
             <div class="mb-3">
                 <label for="telephone" class="form-label">Telephone</label>
-                <input type="text" name="telephone" id="telephone" class="form-control" required title="Enter a valid Sri Lankan phone number (10 digits starting with 0)" />
+                <input type="text" name="telephone" id="telephone" class="form-control" required pattern="0\d{9}" title="Enter a valid Sri Lankan phone number (10 digits starting with 0)" />
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>

@@ -7,9 +7,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemDAO {
+public class ItemDAO implements ItemDAOInterface{
 
     // Add new item
+	@Override
     public void addItem(Item item) {
         String sql = "INSERT INTO items (category_id, name, brand, unit_price, stock_quantity) VALUES (?, ?, ?, ?, ?)";
 
@@ -30,6 +31,7 @@ public class ItemDAO {
     }
 
     // Get all items with category name
+	@Override
     public List<Item> getAllItems() {
         List<Item> items = new ArrayList<>();
         String sql = "SELECT i.*, c.category_name FROM items i LEFT JOIN categories c ON i.category_id = c.category_id";
@@ -59,6 +61,7 @@ public class ItemDAO {
     }
 
     // Get item by ID with category name
+	@Override
     public Item getItemById(int id) {
         String sql = "SELECT i.*, c.category_name FROM items i LEFT JOIN categories c ON i.category_id = c.category_id WHERE i.item_id = ?";
         Item item = null;
@@ -89,6 +92,7 @@ public class ItemDAO {
     }
 
     // Update item
+	@Override
     public void updateItem(Item item) {
         String sql = "UPDATE items SET category_id=?, name=?, brand=?, unit_price=?, stock_quantity=? WHERE item_id=?";
 
@@ -110,6 +114,7 @@ public class ItemDAO {
     }
 
     // Delete item
+	@Override
     public void deleteItem(int id) {
         String sql = "DELETE FROM items WHERE item_id = ?";
 
@@ -125,6 +130,7 @@ public class ItemDAO {
     }
 
     // Search items by name (partial match) with category name
+	@Override
     public List<Item> searchItemsByName(String name) {
         List<Item> items = new ArrayList<>();
         String sql = "SELECT i.*, c.category_name FROM items i LEFT JOIN categories c ON i.category_id = c.category_id WHERE i.name LIKE ?";
@@ -156,6 +162,7 @@ public class ItemDAO {
     }
 
     // Search by name and category
+	@Override
     public List<Item> searchItemsByNameAndCategory(String name, int categoryId) {
         List<Item> items = new ArrayList<>();
         String sql = "SELECT i.*, c.category_name FROM items i LEFT JOIN categories c ON i.category_id = c.category_id WHERE i.name LIKE ? AND i.category_id = ?";
@@ -188,6 +195,7 @@ public class ItemDAO {
     }
 
     // Get items by category only
+	@Override
     public List<Item> getItemsByCategory(int categoryId) {
         List<Item> items = new ArrayList<>();
         String sql = "SELECT i.*, c.category_name FROM items i LEFT JOIN categories c ON i.category_id = c.category_id WHERE i.category_id = ?";
@@ -219,6 +227,7 @@ public class ItemDAO {
     }
 
     // Update stock only
+	@Override
     public void updateStock(int itemId, int newStockQuantity) {
         String sql = "UPDATE items SET stock_quantity = ? WHERE item_id = ?";
 

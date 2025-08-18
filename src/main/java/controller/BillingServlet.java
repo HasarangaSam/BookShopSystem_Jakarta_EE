@@ -1,8 +1,11 @@
 package controller;
 
 import dao.BillDAO;
+import dao.BillDAOInterface;
 import dao.CustomerDAO;
+import dao.CustomerDAOInterface;
 import dao.ItemDAO;
+import dao.ItemDAOInterface;
 import model.Bill;
 import model.BillItem;
 import model.Item;
@@ -25,9 +28,9 @@ import java.util.List;
 })
 public class BillingServlet extends HttpServlet {
 
-    private BillDAO billDAO;
-    private ItemDAO itemDAO;
-    private CustomerDAO customerDAO;
+    private BillDAOInterface billDAO;
+    private ItemDAOInterface itemDAO;
+    private CustomerDAOInterface customerDAO;
 
     @Override
     public void init() {

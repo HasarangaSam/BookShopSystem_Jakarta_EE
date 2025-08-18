@@ -14,9 +14,11 @@ import util.PasswordUtil;
 /**
  * UserDAO - Handles database operations related to users.
  */
-public class UserDAO {
+public class UserDAO implements UserDAOInterface{
 
+	
     // Validates login by username and password
+	@Override
     public User validateLogin(String username, String password) {
         String sql = "SELECT * FROM users WHERE username = ?";
         User user = null;
@@ -49,6 +51,7 @@ public class UserDAO {
     }
 
     // Returns all users except admin
+	@Override
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<>();
         String sql = "SELECT * FROM users WHERE role IN ('cashier', 'stockkeeper')";
@@ -75,6 +78,7 @@ public class UserDAO {
     }
 
     // Adds a new user (cashier or stockkeeper)
+	@Override
     public void addUser(User user) {
         String sql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
 
@@ -93,6 +97,7 @@ public class UserDAO {
     }
 
     // Finds a user by ID
+	@Override
     public User getUserById(int id) {
         String sql = "SELECT * FROM users WHERE user_id = ?";
         User user = null;
@@ -120,6 +125,7 @@ public class UserDAO {
     }
 
     // Updates a user - password only updated if new password is provided
+	@Override
     public void updateUser(User user) {
         String sqlWithPassword = "UPDATE users SET username = ?, password = ?, role = ? WHERE user_id = ?";
         String sqlWithoutPassword = "UPDATE users SET username = ?, role = ? WHERE user_id = ?";
@@ -149,6 +155,7 @@ public class UserDAO {
     }
 
     // Deletes a user by ID
+	@Override
     public void deleteUser(int id) {
         String sql = "DELETE FROM users WHERE user_id = ?";
 

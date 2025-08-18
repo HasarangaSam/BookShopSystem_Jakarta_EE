@@ -50,7 +50,7 @@
 <!-- Stockkeeper Sidebar -->
 <div class="sidebar">
     <h4>📦 Pahana Edu</h4>
-    <a href="../storekeeper/dashboard.jsp">📊 Dashboard</a>
+    <a href="../stockkeeper/dashboard.jsp">📊 Dashboard</a>
     <a href="categories">🗂️ Manage Categories</a>
     <a href="items">📦 Manage Items</a>
     <a href="../common/help.jsp">❓ Help</a>

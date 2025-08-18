@@ -43,9 +43,9 @@
 %>
     <%@ include file="../sidebars/cashier_sidebar.jsp" %>
 <%
-    } else if ("storekeeper".equals(role)) {
+    } else if ("stockkeeper".equals(role)) {
 %>
-    <%@ include file="../sidebars/storekeeper_sidebar.jsp" %>
+    <%@ include file="../sidebars/stockkeeper_sidebar.jsp" %>
 <%
     }
 %>

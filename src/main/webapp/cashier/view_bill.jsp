@@ -42,6 +42,20 @@
 
 <div class="container">
     <div class="card shadow">
+    
+            <!-- Success message from email action -->
+        <% if ("Invoice emailed successfully".equals(request.getParameter("msg"))) { %>
+            <div class="alert alert-success text-center mb-4">
+                ✅ Invoice emailed successfully!
+            </div>
+        <% } %>
+
+        <!-- Error message from email failure -->
+        <% if ("Failed to send email".equals(request.getParameter("error"))) { %>
+            <div class="alert alert-danger text-center mb-4">
+                ❌ Failed to send email. Please try again.
+            </div>
+        <% } %>
 
         <% if ("true".equals(request.getParameter("new"))) { %>
             <div class="alert alert-success text-center mb-4">
@@ -100,6 +114,7 @@
 </div>
 
 <%@ include file="../common/footer.jsp" %>
+
 
 </body>
 </html>

@@ -1,6 +1,7 @@
 package controller;
 
 import dao.UserDAO;
+import dao.UserDAOInterface;
 import model.User;
 import util.PasswordUtil;
 import jakarta.servlet.ServletException;
@@ -20,7 +21,7 @@ import java.util.List;
 })
 public class UserServlet extends HttpServlet {
 
-    private UserDAO userDAO;
+    private UserDAOInterface userDAO;
 
     @Override
     public void init() {

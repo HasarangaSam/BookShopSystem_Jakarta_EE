@@ -10,9 +10,10 @@ import java.util.List;
 /**
  * CategoryDAO - Handles database operations related to categories.
  */
-public class CategoryDAO {
+public class CategoryDAO implements CategoryDAOInterface {
 
     // Add new category
+	@Override
     public void addCategory(Category category) {
         String sql = "INSERT INTO categories (category_name) VALUES (?)";
 
@@ -28,6 +29,7 @@ public class CategoryDAO {
     }
 
     // Get all categories
+	@Override
     public List<Category> getAllCategories() {
         List<Category> categories = new ArrayList<>();
         String sql = "SELECT * FROM categories";
@@ -52,6 +54,7 @@ public class CategoryDAO {
     }
 
     // Get single category by ID
+	@Override
     public Category getCategoryById(int id) {
         String sql = "SELECT * FROM categories WHERE category_id = ?";
         Category category = null;
@@ -77,6 +80,7 @@ public class CategoryDAO {
     }
 
     // Update category
+	@Override
     public void updateCategory(Category category) {
         String sql = "UPDATE categories SET category_name = ? WHERE category_id = ?";
 
@@ -93,6 +97,7 @@ public class CategoryDAO {
     }
 
     // Delete category
+	@Override
     public void deleteCategory(int id) {
         String sql = "DELETE FROM categories WHERE category_id = ?";
 

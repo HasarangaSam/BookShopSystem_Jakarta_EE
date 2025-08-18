@@ -70,7 +70,7 @@
     <div class="card login-card col-md-5 col-lg-4">
         <div class="card-header">
             <h3 class="mb-0">Pahana Edu</h3>
-            <p class="mb-0">Web-Based Billing System</p>
+            <p class="mb-0">Web-Based Book Shop System</p>
         </div>
         <div class="card-body">
             <!-- Login form -->

@@ -17,14 +17,14 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Admin - Bill History</title>
+    <title>Admin - Billing History</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
 </head>
 <body>
 
 <!-- ✅ Shift content to the right with direct inline style -->
 <div class="container mt-4" style="margin-left: 240px;">
-    <h2>Bill History</h2>
+    <h2>Billing History</h2>
     <table class="table table-striped">
         <thead>
             <tr>

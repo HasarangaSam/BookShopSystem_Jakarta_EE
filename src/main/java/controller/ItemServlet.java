@@ -1,6 +1,7 @@
 package controller;
 
 import dao.ItemDAO;
+import dao.ItemDAOInterface;
 import dao.CategoryDAO;
 import model.Item;
 import model.Category;
@@ -24,7 +25,7 @@ import java.util.List;
 })
 public class ItemServlet extends HttpServlet {
 
-    private ItemDAO itemDAO;
+    private ItemDAOInterface itemDAO;
 
     @Override
     public void init() {

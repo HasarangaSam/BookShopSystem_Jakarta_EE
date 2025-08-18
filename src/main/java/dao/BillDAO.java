@@ -11,9 +11,10 @@ import java.util.List;
 /**
  * BillDAO - Handles all billing-related database operations.
  */
-public class BillDAO {
+public class BillDAO implements BillDAOInterface {
 
     // Add a bill and return the generated bill ID
+	@Override
     public int addBill(Bill bill) {
         String sql = "INSERT INTO bills (customer_id, cashier_id, bill_date, total_amount) VALUES (?, ?, ?, ?)";
         int billId = -1;
@@ -41,6 +42,7 @@ public class BillDAO {
     }
 
     // Add multiple items to bill_items table
+	@Override
     public void addBillItems(List<BillItem> items, int billId) {
         String sql = "INSERT INTO bill_items (bill_id, item_id, quantity, unit_price, subtotal) VALUES (?, ?, ?, ?, ?)";
 
@@ -64,6 +66,7 @@ public class BillDAO {
     }
 
     // Get all bills (for Admin and Cashier)
+	@Override
     public List<Bill> getAllBills() {
         List<Bill> bills = new ArrayList<>();
         String sql = """
@@ -103,6 +106,7 @@ public class BillDAO {
 
 
  // Get a bill by ID with customer and cashier info
+	@Override
     public Bill getBillById(int billId) {
         Bill bill = null;
         String sql = """
@@ -140,6 +144,7 @@ public class BillDAO {
 
 
     // Get all items of a bill
+	@Override
     public List<BillItem> getBillItemsByBillId(int billId) {
         List<BillItem> items = new ArrayList<>();
         String sql = """
