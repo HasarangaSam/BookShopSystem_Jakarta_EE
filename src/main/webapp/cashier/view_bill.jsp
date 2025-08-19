@@ -23,16 +23,37 @@
     <style>
         body {
             background-color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
         }
+
         .container {
             margin-top: 40px;
             max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-grow: 1;
+            padding-bottom: 50px; /* Prevents footer overlap */
         }
+
         .card {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow-y: auto; /* Allow scrolling */
         }
+
         .table th, .table td {
             vertical-align: middle;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -42,8 +63,8 @@
 
 <div class="container">
     <div class="card shadow">
-    
-            <!-- Success message from email action -->
+
+        <!-- Success message from email action -->
         <% if ("Invoice emailed successfully".equals(request.getParameter("msg"))) { %>
             <div class="alert alert-success text-center mb-4">
                 ✅ Invoice emailed successfully!
@@ -114,7 +135,6 @@
 </div>
 
 <%@ include file="../common/footer.jsp" %>
-
 
 </body>
 </html>

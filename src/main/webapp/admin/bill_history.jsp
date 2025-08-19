@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<!-- ✅ Shift content to the right with direct inline style -->
+<!-- Shift content to the right with direct inline style -->
 <div class="container mt-4" style="margin-left: 240px;">
     <h2>Billing History</h2>
     <table class="table table-striped">

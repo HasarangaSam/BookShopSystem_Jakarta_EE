@@ -49,13 +49,12 @@
 
 <!-- Admin Sidebar -->
 <div class="sidebar">
-    <h4>📘 Pahana Edu</h4>
-    <a href="../admin/dashboard.jsp">📊 Dashboard</a>
-    <a href="users">👥 Manage Users</a>
-    <a href="customers">📇 Manage Customers</a>
-    <a href="view_items">📚 View Inventory</a>
-    <a href="bill_history">📈 Billing History</a>
-    <a href="analytics">📊 Analytics</a>
-    <a href="../common/help.jsp">❓ Help</a>
-    <a href="../logout.jsp">🚪 Logout</a>
+    <a href="${pageContext.request.contextPath}/admin/dashboard.jsp">📊 Dashboard</a>
+	<a href="${pageContext.request.contextPath}/admin/users">👥 Manage Users</a>
+	<a href="${pageContext.request.contextPath}/admin/customers">📇 Manage Customers</a>
+	<a href="${pageContext.request.contextPath}/admin/view_items">📚 View Inventory</a>
+	<a href="${pageContext.request.contextPath}/admin/bill_history">📈 Billing History</a>
+	<a href="${pageContext.request.contextPath}/admin/analytics">📊 Analytics</a>
+	<a href="${pageContext.request.contextPath}/common/help.jsp">❓ Help</a>
+	<a href="${pageContext.request.contextPath}/logout.jsp">🚪 Logout</a>
 </div>

@@ -23,23 +23,42 @@
     <style>
         body {
             background: #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures full height of the page */
+            margin: 0;
         }
 
         .container {
             margin-top: 40px;
             max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-grow: 1;
+            padding-bottom: 50px; /* Prevents footer overlap */
         }
 
         .card {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow-y: auto; /* Allow scrolling */
         }
 
         .form-control[readonly] {
             background-color: #e2e8f0;
         }
+
+        footer {
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
+
 <%@ include file="../sidebars/cashier_sidebar.jsp" %>
 
 <div class="container">

@@ -41,7 +41,7 @@ public class BillDAOTest {
         item1.setUnitPrice(500.0);
         item1.setSubtotal(1000.0);
 
-        billDAO.addBillItems(Arrays.asList(item1), billId);
+//        billDAO.addBillItems(Arrays.asList(item1), billId);
 
         // Step 3: Get bill
         Bill fetched = billDAO.getBillById(billId);

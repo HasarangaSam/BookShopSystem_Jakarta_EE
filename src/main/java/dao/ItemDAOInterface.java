@@ -1,5 +1,6 @@
 package dao;
 
+import model.BillItem;
 import model.Item;
 import java.util.List;
 
@@ -22,5 +23,6 @@ public interface ItemDAOInterface {
     List<Item> getItemsByCategory(int categoryId);
 
     void updateStock(int itemId, int newStockQuantity);
+
 }
 

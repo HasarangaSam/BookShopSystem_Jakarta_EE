@@ -50,11 +50,11 @@
 <!-- Cashier Sidebar -->
 <div class="sidebar">
     <h4>🧾 Pahana Edu</h4>
-    <a href="dashboard.jsp">🏠 Dashboard</a>
-    <a href="customers">📇 Manage Customers</a>
-    <a href="billing">➕ New Bill</a>
-    <a href="bill_history">🧾 Billing History</a>
-    <a href="../common/help.jsp">❓ Help</a>
-    <a href="../logout.jsp">🚪 Logout</a>
+    <a href="${pageContext.request.contextPath}/cashier/dashboard.jsp">🏠 Dashboard</a>
+    <a href="${pageContext.request.contextPath}/cashier/customers">📇 Manage Customers</a>
+    <a href="${pageContext.request.contextPath}/cashier/billing">➕ New Bill</a>
+    <a href="${pageContext.request.contextPath}/cashier/bill_history">🧾 Billing History</a>
+    <a href="${pageContext.request.contextPath}/common/help.jsp">❓ Help</a>
+    <a href="${pageContext.request.contextPath}/logout.jsp">🚪 Logout</a>
 </div>
 

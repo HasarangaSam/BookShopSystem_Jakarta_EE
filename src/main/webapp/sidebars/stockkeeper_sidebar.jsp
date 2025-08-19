@@ -50,9 +50,9 @@
 <!-- Stockkeeper Sidebar -->
 <div class="sidebar">
     <h4>📦 Pahana Edu</h4>
-    <a href="../stockkeeper/dashboard.jsp">📊 Dashboard</a>
-    <a href="categories">🗂️ Manage Categories</a>
-    <a href="items">📦 Manage Items</a>
-    <a href="../common/help.jsp">❓ Help</a>
-    <a href="../logout.jsp">🚪 Logout</a>
+    <a href="${pageContext.request.contextPath}/stockkeeper/dashboard.jsp">📊 Dashboard</a>
+    <a href="${pageContext.request.contextPath}/stockkeeper/categories">🗂️ Manage Categories</a>
+    <a href="${pageContext.request.contextPath}/stockkeeper/items">📦 Manage Items</a>
+    <a href="${pageContext.request.contextPath}/common/help.jsp">❓ Help</a>
+    <a href="${pageContext.request.contextPath}/logout.jsp">🚪 Logout</a>
 </div>
