@@ -1,6 +1,7 @@
 package controller;
 
 import dao.BillDAO;
+import dao.BillDAOInterface;
 import model.Bill;
 import model.BillItem;
 import util.EmailUtil;
@@ -19,7 +20,7 @@ import java.util.List;
 @WebServlet("/cashier/invoice")
 public class InvoiceServlet extends HttpServlet {
 
-    private BillDAO billDAO;
+    private BillDAOInterface billDAO;
 
     @Override
     public void init() {
