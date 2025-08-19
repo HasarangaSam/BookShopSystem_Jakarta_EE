@@ -1,6 +1,7 @@
 package test;
 
 import dao.BillDAO;
+import dao.BillDAOInterface;
 import model.Bill;
 import model.BillItem;
 import org.junit.Before;
@@ -14,7 +15,7 @@ import static org.junit.Assert.*;
 
 public class BillDAOTest {
 
-    private BillDAO billDAO;
+    private BillDAOInterface billDAO;
 
     @Before
     public void setUp() {

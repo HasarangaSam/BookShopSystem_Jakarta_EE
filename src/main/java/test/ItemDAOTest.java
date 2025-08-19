@@ -1,6 +1,7 @@
 package test;
 
 import dao.ItemDAO;
+import dao.ItemDAOInterface;
 import model.Item;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class ItemDAOTest {
 
-    private ItemDAO itemDAO;
+    private ItemDAOInterface itemDAO;
 
     @Before
     public void setUp() {

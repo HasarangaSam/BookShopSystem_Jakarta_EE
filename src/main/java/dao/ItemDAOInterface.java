@@ -23,3 +23,4 @@ public interface ItemDAOInterface {
 
     void updateStock(int itemId, int newStockQuantity);
 }
+

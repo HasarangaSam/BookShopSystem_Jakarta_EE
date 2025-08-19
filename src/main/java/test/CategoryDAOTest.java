@@ -1,6 +1,7 @@
 package test;
 
 import dao.CategoryDAO;
+import dao.CategoryDAOInterface;
 import model.Category;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class CategoryDAOTest {
 
-    private CategoryDAO categoryDAO;
+    private CategoryDAOInterface categoryDAO;
 
     @Before
     public void setUp() {
