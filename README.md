@@ -12,7 +12,7 @@ The system streamlines operations for three key roles: *Admin, Cashier, and Stoc
 - ✅ *Testing & CI/CD* – DAO testing with JUnit, GitHub Actions for automated workflow  
 
 ## 🛠️ Tech Stack
-- *Backend:* Java, JSP, Servlets, JDBC  
+- *Backend:* JSP, Servlets, JDBC  
 - *Database:* MySQL with triggers  
 - *Libraries:* iText (PDF), Jakarta Mail (Email)  
 - *Architecture:* MVC + DAO pattern  
